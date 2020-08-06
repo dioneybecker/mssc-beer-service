@@ -1,19 +1,19 @@
 {
-        "AWSEBDockerrunVersion": 2,
-        "containerDefinitions": [
-            {
-                "name": "mssc-beer-service",
-                "image": "868240383494.dkr.ecr.us-east-2.amazonaws.com/mssc-beer-service:latest",
-                "memory": 128,
-                "portMappings": [
-                    {
-                        "hostPort": 8080,
-                        "containerPort": 0
-                    }
-                ],
-                "links": [
-                    "mssc-beer-service"
-                ]
-            }
-        ]
-    }
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "mssc-beer-service",
+            "image": "868240383494.dkr.ecr.us-east-2.amazonaws.com/mssc-beer-service:latest",
+            "memory": 128,
+            "portMappings": [
+                {
+                    "hostPort": 8000,
+                    "containerPort": 8080
+                }
+            ],
+            "links": [
+                "mssc-beer-service"
+            ]
+        }
+    ]
+}
