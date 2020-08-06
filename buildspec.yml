@@ -17,8 +17,8 @@ phases:
       - mvn clean install
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t $REPOSITORY_URI:latest .
-      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+      - docker build -t 868240383494.dkr.ecr.us-east-2.amazonaws.com/mssc-beer-service:latest .
+      - docker tag 868240383494.dkr.ecr.us-east-2.amazonaws.com/mssc-beer-service:latest 868240383494.dkr.ecr.us-east-2.amazonaws.com/mssc-beer-service:latest
   post_build:
     commands:
       - echo Build completed on `date`
@@ -28,4 +28,8 @@ phases:
       - echo Writing image definitions file...
       - printf '[{"name":"mssc-beer-service","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
-    files: imagedefinitions.json
+    files: 
+      - mssc-beer-service-0.0.1-SNAPSHOT.jar
+      - Dockerfile
+      - imagedefinitions.json
+
