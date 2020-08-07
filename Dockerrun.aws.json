@@ -1,9 +1,9 @@
 {
-    "AWSEBDockerrunVersion": 2,
+    "AWSEBDockerrunVersion": 1,
     "containerDefinitions": [
         {
             "name": "mssc-beer-service",
-            "image": "868240383494.dkr.ecr.us-east-2.amazonaws.com/mssc-beer-service",
+            "image": "868240383494.dkr.ecr.us-east-2.amazonaws.com/mssc-beer-service:latest",
             "memory": 128,
             "portMappings": [
                 {
