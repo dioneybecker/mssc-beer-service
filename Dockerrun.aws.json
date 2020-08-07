@@ -3,16 +3,13 @@
     "containerDefinitions": [
         {
             "name": "mssc-beer-service",
-            "image": "868240383494.dkr.ecr.us-east-2.amazonaws.com/mssc-beer-service:latest",
+            "image": "868240383494.dkr.ecr.us-east-2.amazonaws.com/mssc-beer-service",
             "memory": 128,
             "portMappings": [
                 {
                     "hostPort": 8000,
                     "containerPort": 8080
                 }
-            ],
-            "links": [
-                "mssc-beer-service"
             ]
         }
     ]
