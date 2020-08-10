@@ -31,5 +31,6 @@ artifacts:
     files: 
       - target/mssc-beer-service-0.0.1-SNAPSHOT.jar
       - imagedefinitions.json
+      - Dockerrun.aws.json
 deploy:
     artifact: Dockerrun.aws.json
