@@ -1,7 +1,7 @@
 {
     "Image": {
         "Name": "868240383494.dkr.ecr.us-east-2.amazonaws.com/mssc-beer-service:latest",
-        "Update": "true"
+        "Update": "false"
     },
     "Ports": [
         {
