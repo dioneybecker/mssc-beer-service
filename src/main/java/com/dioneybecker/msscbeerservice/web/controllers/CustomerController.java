@@ -3,7 +3,7 @@ package com.dioneybecker.msscbeerservice.web.controllers;
 import java.util.UUID;
 
 import com.dioneybecker.msscbeerservice.web.models.CustomerDto;
-import com.dioneybecker.msscbeerservice.web.services.CustomerService;
+import com.dioneybecker.msscbeerservice.services.CustomerService;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
