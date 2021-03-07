@@ -1,7 +1,7 @@
 package com.dioneybecker.msscbeerservice.web.mappers;
 
 import com.dioneybecker.msscbeerservice.domain.Beer;
-import com.dioneybecker.msscbeerservice.web.models.BeerDto;
+import com.dioneybecker.brewery.model.BeerDto;
 
 import org.mapstruct.Mapper;
 

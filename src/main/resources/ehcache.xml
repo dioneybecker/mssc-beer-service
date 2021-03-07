@@ -1,0 +1,93 @@
+<!-- <config
+        xmlns:jsr107='http://www.ehcache.org/v3/jsr107'
+        xmlns='http://www.ehcache.org/v3'>
+    <service>
+        <jsr107:defaults enable-management="true" enable-statistics="true"/>
+    </service>
+    
+    <cache alias="beerCache" uses-template="config-cache"/>
+    <cache alias="beerUpcCache" uses-template="config-cache"/>
+    <cache alias="beerListCache" uses-template="config-cache"/>
+
+    <cache-template name="config-cache">
+        <expiry>
+            <ttl unit="minutes">5</ttl>
+        </expiry>
+        <resources>
+            <heap>1</heap>
+            <offheap unit="MB">1</offheap>
+        </resources>
+    </cache-template>
+</config> -->
+
+	<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xmlns="http://www.ehcache.org/v3"
+	    xmlns:jsr107="http://www.ehcache.org/v3/jsr107"
+	    xsi:schemaLocation="
+	            http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd
+	            http://www.ehcache.org/v3/jsr107 http://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd">
+        
+        <cache alias="beerCache">
+	        <key-type>java.util.UUID</key-type>
+	        <value-type>com.dioneybecker.brewery.model.BeerDto</value-type>
+	        <expiry>
+	            <ttl unit="seconds">30</ttl>
+	        </expiry>
+	 
+	        <resources>
+	            <heap unit="entries">2</heap>
+	            <offheap unit="MB">10</offheap>
+	        </resources>
+	    </cache>
+        <cache alias="beerUpcCache">
+	        <key-type>java.util.UUID</key-type>
+	        <value-type>com.dioneybecker.brewery.model.BeerDto</value-type>
+	        <expiry>
+	            <ttl unit="seconds">30</ttl>
+	        </expiry>
+	 
+	        <resources>
+	            <heap unit="entries">2</heap>
+	            <offheap unit="MB">10</offheap>
+	        </resources>
+	    </cache>
+        
+
+        <cache alias="beerListCache">
+	        <!-- <key-type>java.util.UUID</key-type>
+	        <value-type>com.dioneybecker.msscbeerservice.web.models.BeerDto</value-type> -->
+	        <expiry>
+	            <ttl unit="seconds">30</ttl>
+	        </expiry>
+	 
+	        <resources>
+	            <heap unit="entries">2</heap>
+	            <offheap unit="MB">10</offheap>
+	        </resources>
+	    </cache>
+</config>
+
+<!-- 
+<ehcache:config
+    xmlns:ehcache="http://www.ehcache.org/v3"
+    xmlns:jcache="http://www.ehcache.org/v3/jsr107">
+ 
+  <ehcache:cache-template name="config-cache">
+    <ehcache:expiry>
+      <ehcache:tti unit="minutes">2</ehcache:tti>
+    </ehcache:expiry>
+    <ehcache:heap unit="MB">1</ehcache:heap>
+  </ehcache:cache-template>
+
+  <ehcache:cache alias="beerCache" uses-template="config-cache">
+  <ehcache:key-type>java.lang.Long</ehcache:key-type>
+    <ehcache:value-type>com.dioneybecker.msscbeerservice.web.models.BeerDto</ehcache:value-type>
+  </ehcache:cache>
+
+  <ehcache:cache alias="beerListCache" uses-template="config-cache">
+    <ehcache:key-type>java.lang.Long</ehcache:key-type>
+    <ehcache:value-type>com.dioneybecker.msscbeerservice.web.models.BeerPagedList</ehcache:value-type>
+  </ehcache:cache>
+
+</ehcache:config> -->
+

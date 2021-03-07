@@ -5,7 +5,12 @@ import java.util.UUID;
 
 import com.dioneybecker.msscbeerservice.web.models.BeerDto;
 import com.dioneybecker.msscbeerservice.web.services.BeerService;
+import com.dioneybecker.brewery.model.BeerDto;
+import com.dioneybecker.brewery.model.BeerPagedList;
+import com.dioneybecker.brewery.model.BeerStyleEnum;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +32,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BeerController {
 
-    private final BeerService beerService;
+    @Autowired
+    BeerService beerService;
 
     public BeerController(BeerService beerService) {
         this.beerService = beerService;

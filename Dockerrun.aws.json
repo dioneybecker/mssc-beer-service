@@ -1,13 +1,13 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-        "Name": "868240383494.dkr.ecr.us-east-2.amazonaws.com/mssc-beer-service:latest",
+        "Name": "868240383494.dkr.ecr.sa-east-1.amazonaws.com/mssc-beer-inventory-service:latest",
         "Update": "false"
     },
     "Ports": [
         {
-          "ContainerPort": 8080,
-          "HostPort": 8000
+          "ContainerPort": 8280,
+          "HostPort": 8280
         }
     ]
 }

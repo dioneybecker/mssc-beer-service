@@ -1,4 +1,4 @@
-package com.dioneybecker.msscbeerservice.web.models;
+package com.dioneybecker.brewery.model;
 
 import java.util.UUID;
 
