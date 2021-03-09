@@ -31,7 +31,6 @@ build/
 .vscode/
 /Dockerfile_old
 /.devcontainer
-/.mvn
 /.settings
 /.sts4-cache
 /.vscode
