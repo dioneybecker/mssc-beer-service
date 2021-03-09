@@ -2,13 +2,10 @@ package com.dioneybecker.msscbeerservice.web.controllers;
 
 import java.util.UUID;
 
-import com.dioneybecker.msscbeerservice.services.BeerService;
-import com.dioneybecker.msscbeerservice.web.models.BeerDto;
-import com.dioneybecker.msscbeerservice.web.models.BeerPagedList;
-import com.dioneybecker.msscbeerservice.web.models.BeerStyleEnum;
 import com.dioneybecker.brewery.model.BeerDto;
 import com.dioneybecker.brewery.model.BeerPagedList;
 import com.dioneybecker.brewery.model.BeerStyleEnum;
+import com.dioneybecker.msscbeerservice.services.BeerService;
 
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpHeaders;
