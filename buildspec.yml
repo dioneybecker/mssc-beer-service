@@ -11,7 +11,8 @@ phases:
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI=868240383494.dkr.ecr.sa-east-1.amazonaws.com/mssc-beer-service
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
-      - IMAGE_TAG=${COMMIT_HASH:=latest}
+      # - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - IMAGE_TAG=latest
   build:
     commands:
       - mvn clean install -DskipTests
