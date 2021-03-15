@@ -12,13 +12,14 @@ import org.springframework.context.annotation.Profile;
 import lombok.extern.slf4j.Slf4j;
 
 
+@Profile("awsdev")
 @Slf4j
 @EnableDiscoveryClient
 @Configuration
 public class ServiceDiscovery {
 
     @Bean
-    @Profile("!default")
+    @Profile("awsdev")
     public EurekaInstanceConfigBean eurekaInstanceConfigBean(InetUtils inetUtils) {
         EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(inetUtils);
         AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("eureka");
